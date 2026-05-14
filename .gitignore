@@ -1,0 +1,7 @@
+.claude/
+error_log
+*.log
+.env
+.env.*
+Thumbs.db
+.DS_Store
