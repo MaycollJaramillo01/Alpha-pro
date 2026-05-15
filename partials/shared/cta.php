@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
 <style>
 .apr-cta{padding:90px 0;background:#0a0a0a;position:relative;overflow:hidden}
 .apr-cta::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(201,151,60,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(201,151,60,.04) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}

@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
 $allAreas=array_filter(array_map('trim',(array)($Areas??[])));
 if(empty($allAreas)) $allAreas=['Dallas','Fort Worth','Arlington','Irving','Plano','Garland','Mesquite','Grand Prairie','McKinney','Frisco','Denton','Carrollton','Richardson','Lewisville'];
 $mapHtml=trim((string)($GoogleMap??''));

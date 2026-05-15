@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
 <style>
 .apr-process{padding:90px 0;background:#fff}
 .apr-process__head{text-align:center;max-width:580px;margin:0 auto 56px}

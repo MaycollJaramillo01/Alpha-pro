@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
 $faqItems=$FaqCopy['items']??[
   ['q'=>'Do you offer free estimates?','a'=>'Yes. We provide free, detailed estimates for all renovation projects across the DFW area. We assess scope, timeline, and materials before any commitment.'],
   ['q'=>'Are you insured?','a'=>'Yes. Alpha Pro Renovation Group is fully insured. Your property and our workers are covered on every project.'],

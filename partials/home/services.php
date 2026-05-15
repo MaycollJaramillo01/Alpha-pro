@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
 $featuredSlugs=['kitchen-remodeling','bathroom-remodeling','custom-shower-installation','flooring-installation','interior-exterior-painting','drywall-installation-repair','deck-building','concrete-work'];
 $icons=['kitchen-remodeling'=>'fa-utensils','bathroom-remodeling'=>'fa-bath','custom-shower-installation'=>'fa-shower','flooring-installation'=>'fa-layer-group','interior-exterior-painting'=>'fa-paint-roller','drywall-installation-repair'=>'fa-wall-bricks','deck-building'=>'fa-tree','concrete-work'=>'fa-road'];
 $featured=[];

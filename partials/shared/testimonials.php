@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php';
 $reviews=array_slice($DetailedReviewItems??$DirectoryReviewItems??[],0,3);
 ?>
 <style>

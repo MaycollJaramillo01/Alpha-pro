@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 @session_start();
 
 /*=========================
@@ -1935,5 +1935,3 @@ body{
   border-radius: 8px !important;
 }
 CSS;
-?>
-

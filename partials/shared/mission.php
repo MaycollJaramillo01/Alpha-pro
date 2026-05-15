@@ -1,4 +1,4 @@
-﻿<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
+<?php if(!isset($Company)) include_once __DIR__.'/../../text.php'; ?>
 <style>
 .apr-mv{padding:0;background:#fff;overflow:hidden}
 .apr-mv__grid{display:grid;grid-template-columns:1fr 1fr}
