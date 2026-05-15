@@ -2,14 +2,7 @@
   "functions": {
     "api/index.php": {
       "runtime": "vercel-php@0.9.0",
-      "excludeFiles": [
-        "assets/img/Alpha Pro/**",
-        "assets/img/gallery/services/**",
-        "assets/img/service/**",
-        "assets/img/projects/**",
-        "assets/img/Manual de marca Alpha pro Renovation group.pdf",
-        "assets/img/logo.png"
-      ]
+      "excludeFiles": "{assets/img/Alpha Pro/**,assets/img/gallery/services/**,assets/img/service/**,assets/img/projects/**,assets/img/Manual de marca Alpha pro Renovation group.pdf,assets/img/logo.png}"
     }
   },
   "routes": [
