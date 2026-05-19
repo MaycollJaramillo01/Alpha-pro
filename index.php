@@ -25,6 +25,7 @@ include __DIR__ . '/header.php';
 
 
 <?php include __DIR__ . '/partials/home/before-after.php'; ?>
+<?php include __DIR__ . '/partials/home/project-videos.php'; ?>
 
 <?php include __DIR__ . '/partials/shared/process.php'; ?>
 <?php include 'partials/shared/testimonials.php'; ?>

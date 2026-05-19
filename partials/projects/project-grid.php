@@ -5,12 +5,15 @@ if (!isset($ServicesList)) include_once __DIR__ . '/../../text.php';
 // Images that have a known category. Any image NOT listed shows only in "All".
 $categoryMap = [
     'flooring'   => ['project-02.jpg','project-03.jpg','project-05.jpg','project-06.jpg',
-                     'project-20.jpg','project-25.jpg','project-48.jpg','project-65.jpg'],
+                     'project-20.jpg','project-25.jpg','project-48.jpg','project-65.jpg',
+                     'project-89.jpg','project-90.jpg','project-91.jpg'],
     'bathroom'   => ['project-50.jpg','project-55.jpg','project-60.jpg',
-                     'project-75.jpg','project-79.jpg'],
+                     'project-75.jpg','project-79.jpg','project-88.jpg'],
     'kitchen'    => ['project-01.jpg','project-45.jpg'],
     'custom'     => ['project-10.jpg','project-15.jpg','project-35.jpg','project-40.jpg',
-                     'project-62.jpg','project-68.jpg','project-70.jpg','project-72.jpg'],
+                     'project-62.jpg','project-68.jpg','project-70.jpg','project-72.jpg',
+                     'project-80.jpg','project-81.jpg','project-82.jpg','project-83.jpg',
+                     'project-84.jpg','project-85.jpg','project-86.jpg','project-87.jpg'],
     'outdoor'    => ['project-30.jpg','project-36.jpg'],
 ];
 
@@ -32,6 +35,8 @@ $tabs = [
 
 // ── Scan gallery directory ────────────────────────────────────────────────────
 $galleryRoot  = __DIR__ . '/../../assets/img/gallery';
+$posterRoot   = $galleryRoot . '/video-posters';
+$posterRelRoot = 'assets/img/gallery/video-posters';
 $imgExts      = ['jpg','jpeg','png','webp'];
 $vidExts      = ['mp4','webm','mov'];
 $galleryItems = [];
@@ -49,7 +54,18 @@ if (is_dir($galleryRoot)) {
             $cat = $fileToCategory[strtolower($file)] ?? 'uncategorized';
             $galleryItems[] = ['src' => $rel, 'cat' => $cat, 'file' => $file, 'type' => 'image'];
         } elseif (in_array($ext, $vidExts, true)) {
-            $videoItems[] = ['src' => $rel, 'cat' => 'videos', 'file' => $file, 'type' => 'video'];
+            $poster = '';
+            if (is_dir($posterRoot)) {
+                $base = pathinfo($file, PATHINFO_FILENAME);
+                foreach ($imgExts as $posterExt) {
+                    $posterFile = $base . '.' . $posterExt;
+                    if (is_file($posterRoot . '/' . $posterFile)) {
+                        $poster = $posterRelRoot . '/' . $posterFile;
+                        break;
+                    }
+                }
+            }
+            $videoItems[] = ['src' => $rel, 'cat' => 'videos', 'file' => $file, 'type' => 'video', 'poster' => $poster];
         }
     }
 }
@@ -188,7 +204,7 @@ $allItems = array_merge($galleryItems, $videoItems);
         <?php foreach ($allItems as $item): ?>
           <div class="pgrid__item show" data-cat="<?=htmlspecialchars($item['cat'])?>">
             <?php if ($item['type'] === 'video'): ?>
-              <video muted playsinline preload="metadata">
+              <video muted playsinline preload="metadata"<?=!empty($item['poster'])?' poster="'.htmlspecialchars($item['poster']).'"':''?>>
                 <source src="<?=htmlspecialchars($item['src'])?>" type="video/mp4">
               </video>
               <div class="pgrid__video-badge"><span><i class="fa-solid fa-play"></i></span></div>

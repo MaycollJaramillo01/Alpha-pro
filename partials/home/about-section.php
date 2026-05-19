@@ -28,8 +28,8 @@
   <div class="container">
     <div class="apr-about__grid">
       <div class="apr-about__img-wrap">
-        <img src="assets/img/projects/project-70.jpg" alt="Alpha Pro Renovation Group" class="apr-about__img-main">
-        <img src="assets/img/projects/project-60.jpg" alt="Renovation detail" class="apr-about__img-accent">
+        <img src="assets/img/gallery/project-83.jpg" alt="Finished staircase renovation by Alpha Pro Renovation Group" class="apr-about__img-main">
+        <img src="assets/img/gallery/project-88.jpg" alt="Glass shower renovation detail" class="apr-about__img-accent">
         <span class="apr-about__badge">Alpha Pro</span>
       </div>
       <div>
@@ -56,5 +56,4 @@
     </div>
   </div>
 </section>
-
 
